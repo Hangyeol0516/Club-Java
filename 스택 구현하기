@@ -1,0 +1,29 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int arr[] = new int[100];
+		int index = 0;
+		
+		while (true) {
+			System.out.println("값을 넣을 것이라면 1 뺄 것이라면 2");
+			int a = scan.nextInt();
+			
+			if (a == 1) {
+				int temp = scan.nextInt();
+				arr[index++] = temp;
+				
+			} else {
+				System.out.println(arr[--index]);
+				arr[index] = 0;
+			}
+		}
+	}
+
+}
